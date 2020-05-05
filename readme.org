@@ -1,6 +1,4 @@
-##### dotfiles for my local setup
----------------------------------
-
+* Dotfiles for my local setup
 
 This simple yet effective technique lets you track the files you care about
 and it doesn't require any tools other than git. The files will be kept at
@@ -15,30 +13,33 @@ to only show files in a specific subdirectory.
 Dead simple!
 
 
-#### Alias
-~~~ sh
+** Alias
+#+BEGIN_SRC bash
 alias dotfiles ='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
-~~~
+#+END_SRC
 
-#### Setup
-~~~ sh
+** Setup
+#+BEGIN_SRC bash
 git init --bare $HOME/.dotfiles.git
 dotfiles remote add origin https://github.com/dandyrunner/dotfiles.git
 dotfiles commit -m "First commit"
 dotfiles push -u origin master
-~~~
+#+END_SRC
 
-#### Configuration
-~~~ sh
+** Configuration
+#+BEGIN_SRC bash
 dotfiles config status.showUntrackedFiles no
+#+END_SRC
 
-# Useful aliases
+
+** Useful aliases
+#+BEGIN_SRC bash
 dotfiles config alias.untracked "status -u ."
 dotfiles config alias.untracked-at "status -u"
-~~~
+#+END_SRC
 
-#### Usage
-~~~ sh
+** Usage
+#+BEGIN_SRC bash
 # Use the dotfiles alias like you would use the git command
 dotfiles status
 dotfiles add --update ...
@@ -52,12 +53,12 @@ dotfiles status -u .config/
 # Listing files (tracked by git)
 dotfiles ls-files
 dotfiles ls-files .config/polybar/
-~~~
+#+END_SRC
 
-#### Replication
-~~~ sh
+**  Replication
+#+BEGIN_SRC bash
 git clone --recursive --separate-git-dir=$HOME/.dotfiles.git https://github.com/dandyrunner/dotfiles.git /tmp/dotfiles
 rsync -rvl --exclude ".git" /tmp/dotfiles/ $HOME/
 rm -r /tmp/dotfiles
 dotfiles submodule update --init --recursive $HOME/
-~~~
+#+END_SRC
