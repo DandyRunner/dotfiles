@@ -1,0 +1,6 @@
+* Packages required
+- AUR/lf
+- AUR/nerd-fonts-complete
+- AUR/pistol
+- mediainfo
+- trash-cli

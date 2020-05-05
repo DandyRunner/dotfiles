@@ -29,6 +29,7 @@ set ignorecase true
 set preview true
 #set previewer ~/.config/lf/scripts/preview
 set previewer pistol
+set info size:time
 
 # use enter for shell commands
 map <enter> shell
