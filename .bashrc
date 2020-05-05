@@ -139,8 +139,8 @@ export PS1="\[\033[38;5;12m\][\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""
 eval "`dircolors -b $DIR_COLORS`"
 
-export EDITOR="emacsclient -c"
-export VISUAL="nvim"
+export EDITOR="nvim"
+export VISUAL="emacsclient -c"
 export BROWSER="brave"
 export TERMINAL="alacritty"
 
