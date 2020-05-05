@@ -1,0 +1,27 @@
+
+IMAPStore echjansen-remote
+Host imap-mail.outlook.com
+Port 993
+User echjansen@outlook.com
+PassCmd "pass mutt-wizard-echjansen"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore echjansen-local
+Subfolders Verbatim
+Path ~/.local/share/mail/echjansen/
+Inbox ~/.local/share/mail/echjansen/INBOX
+Flatten .
+
+Channel echjansen
+Expunge Both
+Master :echjansen-remote:
+Slave :echjansen-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+

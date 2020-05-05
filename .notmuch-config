@@ -1,0 +1,14 @@
+[database]
+path=/home/ejansen/.local/share/mail
+[user]
+name=Erwin Jansen
+primary_email=echjansen@outlook.com
+[new]
+tags=unread;inbox;
+ignore=.mbsyncstate;.uidvalidity
+[search]
+exclude_tags=deleted;spam;
+[maildir]
+synchronize_flags=true
+[crypto]
+gpg_path=gpg

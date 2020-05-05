@@ -1,0 +1,3 @@
+udiskie &
+sxhkd &
+exec bspwm
