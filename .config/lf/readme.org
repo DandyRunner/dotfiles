@@ -4,3 +4,4 @@
 - AUR/pistol
 - mediainfo
 - trash-cli
+- chafa
