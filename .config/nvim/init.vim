@@ -8,17 +8,18 @@ if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autolo
 endif
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
-Plug 'joshdick/onedark.vim' "https://github.com/joshdick/onedark.vim
-Plug 'itchyny/lightline.vim' "https://github.com/itchyny/lightline.vim
-Plug 'vim-airline/vim-airline' "https://github.com/vim-airline/vim-airline
-Plug 'preservim/nerdtree' "https://github.com/preservim/nerdtree
-Plug 'ctrlpvim/ctrlp.vim' "https://github.com/ctrlpvim/ctrlp.vim
-Plug 'sheerun/vim-polyglot' "https://github.com/sheerun/vim-polyglot
-Plug 'preservim/nerdcommenter' "https://github.com/preservim/nerdcommenter
+Plug 'jceb/vim-orgmode'         
+Plug 'joshdick/onedark.vim'     "https://github.com/joshdick/onedark.vim
+Plug 'itchyny/lightline.vim'    "https://github.com/itchyny/lightline.vim
+Plug 'vim-airline/vim-airline'  "https://github.com/vim-airline/vim-airline
+Plug 'preservim/nerdtree'       "https://github.com/preservim/nerdtree
+Plug 'ctrlpvim/ctrlp.vim'       "https://github.com/ctrlpvim/ctrlp.vim
+Plug 'sheerun/vim-polyglot'     "https://github.com/sheerun/vim-polyglot
+Plug 'preservim/nerdcommenter'  "https://github.com/preservim/nerdcommenter
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "https://github.com/neoclide/coc.nvim
-Plug 'tpope/vim-surround'  "https://github.com/tpope/vim-surround
-Plug 'airblade/vim-gitgutter'  "https://github.com/airblade/vim-gitgutter
-Plug 'psliwka/vim-smoothie' "https://github.com/psliwka/vim-smoothie
+Plug 'tpope/vim-surround'       "https://github.com/tpope/vim-surround
+Plug 'airblade/vim-gitgutter'   "https://github.com/airblade/vim-gitgutter
+Plug 'psliwka/vim-smoothie'     "https://github.com/psliwka/vim-smoothie
 call plug#end()
 
 " Leader Mapping
