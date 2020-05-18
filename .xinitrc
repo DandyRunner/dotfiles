@@ -1,3 +1,1 @@
-udiskie &
-sxhkd &
-exec bspwm
+exec dwm
