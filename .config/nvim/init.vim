@@ -81,7 +81,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 
 hi CursorLine gui=bold ctermbg=blue ctermfg=black guibg=darkblue
-hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 set cursorline! cursorcolumn!
 
 set autoread

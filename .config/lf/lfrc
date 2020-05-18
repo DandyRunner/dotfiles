@@ -27,8 +27,6 @@ set hidden true
 set color256 true
 set ignorecase true
 set preview true
-#set previewer ~/.config/lf/scripts/preview
-#set previewer ~/.config/lf/scope
 set previewer pistol
 set info size:time
 
@@ -126,6 +124,19 @@ cmd zip ${{
     rm -rf $1
 }}
 
+# Find stuff
+cmd broot_jump ${{
+  f=$(mktemp)
+  res="$(broot --outcmd $f && cat $f | sed 's/cd //')"
+  rm -f "$f"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
 # Object creation
 cmd mkdir ${{
   printf "Directory Name: "
@@ -213,6 +224,9 @@ map L bottom
 map R reload
 map C clear
 map U unselect
+
+# Broot Mapping
+map fb broot_jump
 
 # Trash Mappings
 map dd trash
