@@ -1,0 +1,9 @@
+* Dotfiles for my local setup
+
+Note: this repo has two branches master using a bare repository and main using chezmoi
+
+** Installing a new system (Arch Linux)
+#+BEGIN_SRC bash
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $dandyrunner
+#+END_SRC
+
